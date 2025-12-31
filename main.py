@@ -195,3 +195,7 @@ def download_logs():
 def download_imgreads():
     ensure_file(IMG_READ_FILE)
     return FileResponse(IMG_READ_FILE, filename="img_reads.jsonl")
+
+@app.get("/api/test")
+def api_test():
+    return {"status": "ok", "message": "API is working!"}
